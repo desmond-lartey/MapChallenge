@@ -1,0 +1,44 @@
+import geopandas as gpd
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Load world shapefile
+world = gpd.read_file(gpd.datasets.get_path('naturalearth_lowres'))
+
+# Creating a simplified dataset for demonstration purposes
+temperature_data = {
+    'Country': ['Canada', 'United States', 'Mexico', 'Brazil', 'United Kingdom', 'Germany', 'Russia', 'India', 'China', 'Australia'],
+    'AverageAnnualTemperature': [-5, 8, 21, 25, 10, 9, -5, 24, 14, 21]  # These are illustrative temperatures (in Celsius)
+}
+
+temperature_df = pd.DataFrame(temperature_data)
+
+# Merge the temperature data with the world shapefile based on country names
+world_with_temperature = world.merge(temperature_df, how='left', left_on='name', right_on='Country')
+
+# Fill missing values with a default value for visualization purposes
+world_with_temperature['AverageAnnualTemperature'] = world_with_temperature['AverageAnnualTemperature'].fillna(0)
+
+# Function to add labels to the map
+def add_labels(ax, df, label_column):
+    for idx, row in df.iterrows():
+        ax.text(row['geometry'].centroid.x, row['geometry'].centroid.y, row[label_column], 
+                horizontalalignment='center', fontsize=8)
+
+# Create the choropleth map
+fig, ax = plt.subplots(1, 1, figsize=(15, 10))
+world_with_temperature.plot(column='AverageAnnualTemperature', ax=ax, legend=True,
+                            legend_kwds={'label': "Average Annual Temperature (°C)",
+                                         'orientation': "horizontal"},
+                            cmap='coolwarm', missing_kwds={'color': 'lightgrey'})
+ax.set_axis_off()
+
+# Add continent labels
+continents = world_with_temperature.dissolve(by='continent').reset_index()
+add_labels(ax, continents, 'continent')
+
+# Add labels for the countries with temperature data
+add_labels(ax, world_with_temperature[world_with_temperature['Country'].notna()], 'name')
+
+plt.title('Average Annual Temperature by Country', fontsize=15)
+plt.show()
