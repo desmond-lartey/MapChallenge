@@ -1,0 +1,33 @@
+import matplotlib.colors as mcolors
+
+# Use an inappropriate projection for population density
+world = gpd.read_file(gpd.datasets.get_path('naturalearth_lowres'))
+world = world.to_crs('EPSG:4326')  # Using a simple geographic projection
+
+# Generate a color scheme with poor contrast
+# For population density, we'll assign random values which is a common data representation error
+world['pop_density'] = np.random.rand(len(world)) * 100
+
+# Define a colormap with insufficient contrast
+cmap = mcolors.ListedColormap(['#e1e1e1', '#888888', '#4f4f4f'])
+
+# Create the plot
+fig, ax = plt.subplots(1, 1, figsize=(15, 10))
+
+# Plot the countries using the poor contrast color scheme
+world.plot(column='pop_density', ax=ax, cmap=cmap, legend=True)
+
+# Add labels for each country in a way that is cluttered and hard to read
+for idx, row in world.iterrows():
+    plt.annotate(s=row['iso_a3'], xy=(row['geometry'].centroid.x, row['geometry'].centroid.y),
+                 horizontalalignment='center', fontweight='light', fontsize='small', color='darkgrey')
+
+# Add a misleading legend: the labels do not correspond to the actual population density
+cbar = plt.colorbar(ax.collections[0], fraction=0.02, pad=0.04)
+cbar.ax.set_yticklabels(['Low', 'Medium', 'High'])  # Label categories
+
+# Set a title
+ax.set_title('World Population Density (inaccurate representation)', fontdict={'fontsize': 20})
+
+plt.axis('on')  # Keep the axis but don't include a grid or proper labels to increase confusion
+plt.show()
