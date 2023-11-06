@@ -1,0 +1,100 @@
+// Constants
+var startDate = '2019-06-01';
+var endDate = '2019-06-11';
+var regionName = 'Asia';
+var countryName = 'India';
+var zoomLevel = 10;
+var centerLongitude = -25.01;
+var centerLatitude = -4.28;
+
+// 1. Define the region of interest
+var region = ee.FeatureCollection('USDOS/LSIB_SIMPLE/2017')
+  .filter(ee.Filter.eq('wld_rgn', regionName));
+Map.centerObject(region, zoomLevel);
+
+// 2. Define the area of interest
+var area = ee.FeatureCollection("FAO/GAUL/2015/level0");
+var country = area.filter(ee.Filter.eq('ADM0_NAME', 'India')); 
+
+// 3. Define the image collection
+var coCollection = ee.ImageCollection('COPERNICUS/S5P/NRTI/L3_CO')
+  .select('CO_column_number_density')
+  .filterDate(startDate, endDate);
+
+// Visualization parameters
+var bandVizParams = {
+  min: 0,
+  max: 0.05,
+  palette: ['black', 'blue', 'purple', 'cyan', 'green', 'yellow', 'red']
+};
+
+Map.addLayer(coCollection, bandVizParams)
+Map.addLayer(country)
+// Function to create a labeled color box for the legend
+function makeRow(color, name) {
+  // Create the color box
+  var colorBox = ui.Label({
+    style: {
+      backgroundColor: color,
+      // Ensure the box is a square
+      padding: '10px',
+      margin: '0 0 4px 0'
+    }
+  });
+
+  // Create the label
+  var description = ui.Label({
+    value: name,
+    style: {margin: '0 0 4px 6px'}
+  });
+
+  // Return the panel
+  return ui.Panel({
+    widgets: [colorBox, description],
+    layout: ui.Panel.Layout.Flow('horizontal')
+  });
+}
+
+// Set position of panel
+var legend = ui.Panel({
+  style: {
+    position: 'bottom-left',
+    padding: '8px 15px'
+  }
+});
+
+// Create legend title
+var legendTitle = ui.Label({
+  value: 'CO Column Number Density',
+  style: {
+    fontWeight: 'bold',
+    fontSize: '18px',
+    margin: '0 0 4px 0',
+    padding: '0'
+  }
+});
+
+// Add the title to the panel
+legend.add(legendTitle);
+
+// Names of the legend
+var names = ['0', '0.01', '0.02', '0.03', '0.04', '0.05', '>0.05'];
+
+// Add color and names to the legend
+for (var i = 0; i < bandVizParams.palette.length; i++) {
+  legend.add(makeRow(bandVizParams.palette[i], names[i]));
+}
+
+// Add legend to map
+Map.add(legend);
+
+// Create the title label for the map
+var title = ui.Label('Near Real-Time Carbon Monoxide Concentration');
+title.style().set({
+  'position': 'top-center',
+  'fontWeight': 'bold',
+  'fontSize': '24px'  // You can adjust this value to your preference
+});
+
+// Add title to the map
+Map.add(title);
