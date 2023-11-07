@@ -1,0 +1,118 @@
+// Define classes and set color parameters.
+var CLASSES_7=[
+  //"open_space",
+  //"nonresidential",
+  //"atomistic",
+  "informal_subdivision",
+  //"formal_subdivision",
+  //"housing_project",
+  "road"]
+var COLORS_7=[
+  //'33A02C',
+  //'E31A1C',
+  //'FB9A99',
+  '00000000',
+  //'1F78B4',
+  //'A6CEE3',
+  'FFD700']
+var CLASSES=CLASSES_7
+var colors=COLORS_7
+var ULU7Params = {bands: ['lulc'], min: 0, max: 6, opacity: 1, palette: colors};
+
+// Generate image of 6-class land use from the highest probability class at each pixel.
+var ULUimage = ULU.select('lulc').reduce(ee.Reducer.firstNonNull()).rename('lulc')
+ULUimage=ULUimage.mask(ULUimage.mask().gt(0))
+
+// Generate image of road areas based on a pixels with greater than 50% probability of being road.
+var roadsImage = ULU.select('road').reduce(ee.Reducer.firstNonNull()).rename('lulc')
+var roadProb = 50
+var roadsMask = roadsImage.updateMask(roadsImage.gt(roadProb)).where(roadsImage, 1)
+
+// Composite 6-class land use and roads into as single image.
+var ULUandRoads = ULUimage.where(roadsMask,6).select('lulc')
+
+var snazzy = require("users/aazuspan/snazzy:styles");
+snazzy.addStyle("https://snazzymaps.com/style/132/light-gray", "Grayscale");
+
+
+// Map both the 6-class land use and composite images.
+Map.addLayer(ULUimage, ULU7Params, 'Intra-urban land use, 6-class (2020)');
+Map.addLayer(ULUandRoads, ULU7Params, 'Intra-urban land use, 7-class (2020)');
+
+
+// Define classes and set color parameters.
+var CLASSES_7 = [
+  //"open_space",
+  //"nonresidential",
+  //"atomistic",
+  "informal_subdivision",
+  //"formal_subdivision",
+  //"housing_project",
+  "road"
+];
+var COLORS_7 = [
+  //'33A02C', // Green
+  //'E31A1C', // Red
+  //'FB9A99', // Pink
+  '00000000', // Yellow
+  //'1F78B4', // Blue
+  //'A6CEE3', // Light blue
+  'FFD700'  // Gray
+];
+
+// Create the legend
+var legend = ui.Panel({
+  style: {
+    position: 'bottom-left',
+    padding: '8px 15px'
+  }
+});
+
+// Add the title to the legend
+var legendTitle = ui.Label({
+  value: 'Road Highlights',
+  style: {
+    fontWeight: 'bold',
+    fontSize: '18px',
+    margin: '0 0 4px 0',
+    padding: '0'
+    }
+});
+
+legend.add(legendTitle);
+
+// Add the color boxes and labels to the legend
+var makeRow = function(color, name) {
+    var colorBox = ui.Label({
+      style: {
+        backgroundColor: '#' + color,
+        // Use padding to give the box height and width
+        padding: '8px',
+        margin: '0 0 4px 0'
+      }
+    });
+
+    var description = ui.Label({
+      value: name,
+      style: {margin: '0 0 4px 6px'}
+    });
+
+    // Return the panel
+    return ui.Panel({
+      widgets: [colorBox, description],
+      layout: ui.Panel.Layout.Flow('horizontal')
+    });
+};
+
+// Add color and and names to the legend
+CLASSES_7.forEach(function(classItem, index) {
+  legend.add(makeRow(COLORS_7[index], classItem));
+});
+
+// Add legend to the map
+Map.add(legend);
+
+// Create the title label.
+var title = ui.Label('Prepared by: Desmond Lartey,Geospatial Analyst');
+title.style().set('position', 'bottom-left');
+Map.add(title);
