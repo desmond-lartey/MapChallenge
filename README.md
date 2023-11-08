@@ -47,7 +47,7 @@ For daily updates and to see my maps, follow me on [LinkedIn](https://www.linked
 ![Day 4 Map](data/Day4.png)
 
 <!--**Map Image:**-->
-![Day 5 Map](data/Day5.jpg)(data/Day51.jpg)
+![Day 5 Map](data/Day5.jpg)[Day 5 Map](data/Day51.jpg)
 
 <!--**Map Image:**-->
 ![Day 6 Map](data/Day6.jpg)
