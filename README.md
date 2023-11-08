@@ -28,7 +28,7 @@ For daily updates and to see my maps, follow me on [LinkedIn](https://www.linked
 
 ## Daily Challenge Entries
 
-### Day 1: [Theme Title]
+<!--### Day 1: [Theme Title]-->
 <!--**Theme Description:**-->
 
 
