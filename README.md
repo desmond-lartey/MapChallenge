@@ -38,7 +38,7 @@ For daily updates and to see my maps, follow me on [LinkedIn](https://www.linked
 <!--**Reflections:**-->
 
 **Map Image:**
-![Day 2 Map](data/Day%20.png)
+![Day 2 Map](data/Day%202.png)
 
 **Map Image:**
 ![Day 3 Map](data/Day%203.gif)
