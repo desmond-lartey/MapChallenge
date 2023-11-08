@@ -29,23 +29,23 @@ For daily updates and to see my maps, follow me on [LinkedIn](https://www.linked
 ## Daily Challenge Entries
 
 ### Day 1: [Theme Title]
-**Theme Description:**
-- Add the theme description here.
+#**Theme Description:**
+
 
 **Map Image:**
 ![Day 1 Map](data/day1_map.png)
 
-**Reflections:**
-- Add your reflections or any other information here.
+#**Reflections:**
 
-[...repeat sections for Day 2 through Day 30...]
+
+#[...repeat sections for Day 2 through Day 30...]
 
 ### Day 30: [Theme Title]
-**Theme Description:**
-- Add the theme description here.
+#**Theme Description:**
+
 
 **Map Image:**
 ![Day 30 Map](data/day30_map.png)
 
-**Reflections:**
-- Add your reflections or any other information here.
+#**Reflections:**
+#- Add your reflections or any other information here.
