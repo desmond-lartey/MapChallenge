@@ -33,14 +33,37 @@ For daily updates and to see my maps, follow me on [LinkedIn](https://www.linked
 
 
 **Map Image:**
-![Day 1 Map](data/day1_map.png)
+![Day 1 Map](data/Day 1.JPG)
+
+<!--**Reflections:**-->
+
+**Map Image:**
+![Day 2 Map](data/Day 2.PNG)
+
+**Map Image:**
+![Day 3 Map](data/Day 3.GIF)
+
+**Map Image:**
+![Day 4 Map](data/Day 4.PNG)
+
+**Map Image:**
+![Day 5 Map](data/Day 5.JPG)
+
+**Map Image:**
+![Day 6 Map](data/Day 6.JPG)
+
+**Map Image:**
+![Day 7 Map](data/Day 7.PNG)
+
+**Map Image:**
+![Day 8 Map](data/Day 8.PNG)
 
 <!--**Reflections:**-->
 
 
 <!--[...repeat sections for Day 2 through Day 30...]-->
 
-### Day 30: [Theme Title]
+<!--### Day 30: [Theme Title]-->
 <!--**Theme Description:**-->
 
 
