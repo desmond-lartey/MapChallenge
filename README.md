@@ -47,5 +47,5 @@ For daily updates and to see my maps, follow me on [LinkedIn](https://www.linked
 **Map Image:**
 ![Day 30 Map](data/day30_map.png)
 
-#**Reflections:**
-#- Add your reflections or any other information here.
+<!--**Reflections:**-->
+<!--- Add your reflections or any other information here.-->
