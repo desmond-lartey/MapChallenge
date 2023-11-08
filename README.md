@@ -32,30 +32,30 @@ For daily updates and to see my maps, follow me on [LinkedIn](https://www.linked
 <!--**Theme Description:**-->
 
 
-**Map Image:**
+<!--**Map Image:**-->
 ![Day 1 Map](data/Day1.JPG)
 
 <!--**Reflections:**-->
 
-**Map Image:**
+<!--**Map Image:**-->
 ![Day 2 Map](data/Day2.png)
 
-**Map Image:**
+<!--**Map Image:**-->
 ![Day 3 Map](data/Day3.gif)
 
-**Map Image:**
+<!--**Map Image:**-->
 ![Day 4 Map](data/Day4.png)
 
-**Map Image:**
-![Day 5 Map](data/Day5.jpg)
+<!--**Map Image:**-->
+![Day 5 Map](data/Day5.jpg)(data/Day51.jpg)
 
-**Map Image:**
+<!--**Map Image:**-->
 ![Day 6 Map](data/Day6.jpg)
 
-**Map Image:**
+<!--**Map Image:**-->
 ![Day 7 Map](data/Day7.PNG)
 
-**Map Image:**
+<!--**Map Image:**-->
 ![Day 8 Map](data/Day8.png)
 
 <!--**Reflections:**-->
@@ -67,8 +67,8 @@ For daily updates and to see my maps, follow me on [LinkedIn](https://www.linked
 <!--**Theme Description:**-->
 
 
-**Map Image:**
-![Day 30 Map](data/day30_map.png)
+<!--**Map Image:**-->
+<!--![Day 30 Map](data/day30_map.png)-->
 
 <!--**Reflections:**-->
 <!--- Add your reflections or any other information here.-->
