@@ -60,6 +60,8 @@ For daily updates and to see my maps, follow me on [LinkedIn](https://www.linked
 
 <!--**Reflections:**-->
 
+<!--**Map Image:**-->
+![Day 9 Map](data/Day9.png)
 
 <!--[...repeat sections for Day 2 through Day 30...]-->
 
