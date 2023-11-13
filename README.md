@@ -1,6 +1,5 @@
 # 30-day Map Challenge
 
-## Introduction
 This November, we embark on the #30dayMapChallenge—a stimulating and creative endeavor that invites professionals, students, and enthusiasts in the geospatial and cartographic realms to craft and share a new map each day, based on a set of themes. Here's why I believe this challenge is more than just a test of skills, but a gateway to profound learning and community engagement:
 
 - **🔍 Intensive Learning**: Each day poses a new theme, pushing us to dive into diverse datasets, explore various software and tools, and experiment with different cartographic techniques. It's a hands-on crash course in the art and science of map-making.
@@ -64,7 +63,7 @@ For daily updates and to see my maps, follow me on [LinkedIn](https://www.linked
 ![Day 12 Map](data/Day121.PNG)
 
 <!--**Map Image:**-->
-![Day 13 Map](data/Day13.PNG)
+![Day 13 Map](data/Day13.png)
 
 <!--[...repeat sections for Day 2 through Day 30...]-->
 
