@@ -1,7 +1,7 @@
 # 30-day Map Challenge
 
 ## Introduction
-This November, I am thrilled to embark on the #30dayMapChallenge—a stimulating and creative endeavor that invites professionals, students, and enthusiasts in the geospatial and cartographic realms to craft and share a new map each day, based on a set of themes. Here's why I believe this challenge is more than just a test of skills, but a gateway to profound learning and community engagement:
+This November, we embark on the #30dayMapChallenge—a stimulating and creative endeavor that invites professionals, students, and enthusiasts in the geospatial and cartographic realms to craft and share a new map each day, based on a set of themes. Here's why I believe this challenge is more than just a test of skills, but a gateway to profound learning and community engagement:
 
 - **🔍 Intensive Learning**: Each day poses a new theme, pushing us to dive into diverse datasets, explore various software and tools, and experiment with different cartographic techniques. It's a hands-on crash course in the art and science of map-making.
 - **👩‍💻 Skill Enhancement**: Whether you're a GIS veteran or a curious newcomer, the challenge scales to your level. From basic data plotting to advanced spatial analysis, every map is a chance to polish old skills or develop new ones.
@@ -16,12 +16,6 @@ Throughout the challenge, I'll be sharing:
 - Daily maps based on the given themes.
 - Insights into the tools and data used for each map.
 - Reflections on what each theme brings to the forefront of our understanding of geospatial data and cartography.
-
-## How to Participate?
-I encourage you to:
-- **Join the Challenge**: Share your maps and insights.
-- **Provide Feedback**: Engage with the community, offer feedback, and exchange ideas.
-- **Learn and Grow**: Use this as an opportunity to learn from others and enhance your own geospatial skills.
 
 ## Stay Connected
 For daily updates and to see my maps, follow me on [LinkedIn](https://www.linkedin.com/in/desmond-lartey/). Let's navigate this challenge together—charting the course of our learning, one map at a time!
@@ -68,6 +62,10 @@ For daily updates and to see my maps, follow me on [LinkedIn](https://www.linked
 
 <!--**Map Image:**-->
 ![Day 12 Map](data/Day121.PNG)
+
+<!--**Map Image:**-->
+![Day 13 Map](data/Day13.PNG)
+
 <!--[...repeat sections for Day 2 through Day 30...]-->
 
 <!--### Day 30: [Theme Title]-->
