@@ -66,7 +66,7 @@ For daily updates and to see my maps, follow me on [LinkedIn](https://www.linked
 ![Day 13 Map](data/Day13.png)
 
 <!--**Map Image:**-->
-![Day 14 Map](data/Day14.png)
+![Day 14 Map](data/Day14.PNG)
 
 <!--**Map Image:**-->
 ![Day 15 Map](data/Day15.jpg)
