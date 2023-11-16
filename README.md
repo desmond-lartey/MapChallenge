@@ -65,6 +65,15 @@ For daily updates and to see my maps, follow me on [LinkedIn](https://www.linked
 <!--**Map Image:**-->
 ![Day 13 Map](data/Day13.png)
 
+<!--**Map Image:**-->
+![Day 14 Map](data/Day14.png)
+
+<!--**Map Image:**-->
+![Day 15 Map](data/Day15.jpg)
+
+<!--**Map Image:**-->
+![Day 16 Map](data/Day16.gif)
+
 <!--[...repeat sections for Day 2 through Day 30...]-->
 
 <!--### Day 30: [Theme Title]-->
