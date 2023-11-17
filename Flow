@@ -1,0 +1,86 @@
+var visParams = {
+  bands: ['Braided', 'Braided', 'Meander'],
+  min: 0,
+  max: 100,
+  gamma: 2.0,
+};
+
+var colors = {min:1,max:6, palette:['#d4a334','#1bff00','#fff700','#1b00ff','#10fff4','#50c7ff']};
+
+var mask = env.gt(1);// Do not map background value
+
+Map.addLayer(gcb.unmask(0),visParams,'ML Prediction',true);
+Map.addLayer(env.mask(mask),colors,'Environments',false);
+
+// Define legend labels for ML Prediction and Environments
+var legendLabels = [
+  //'Meandering (0-100% Confidence)', 
+  'Braided (0-100% Confidence)', 
+  //'Background Value', 
+  'Channel Belt', 
+  '36-year River Migration', 
+  'Active River Channel in 2020', 
+  'Wetland/Lacustrine Extent in 2020', 
+  'Smaller Rivers/Channel Belt Lakes in 2020'
+];
+
+// Define corresponding colors for Environments and assume grayscale for ML Prediction
+var legendColors = ['#808080', '#A9A9A9', '#d4a334', '#1bff00', '#fff700', '#1b00ff', '#10fff4', '#50c7ff'];
+
+// Create the legend container
+var legend = ui.Panel({
+  style: {
+    position: 'bottom-left',
+    padding: '8px 15px',
+    backgroundColor: 'rgba(255, 255, 255, 0.7)'
+  }
+});
+
+// Add legend title
+var legendTitle = ui.Label({
+  value: 'Extent of river channel belt',
+  style: {
+    fontWeight: 'bold',
+    fontSize: '16px',
+    margin: '0 0 4px 0',
+    padding: '0'
+  }
+});
+
+legend.add(legendTitle);
+
+// Function to create a colored box
+function makeColorBox(color) {
+  return ui.Label({
+    style: {
+      backgroundColor: color,
+      padding: '8px',
+      margin: '0 0 4px 0',
+      border: '1px solid black'
+    }
+  });
+}
+
+// Add legend items
+legendLabels.forEach(function(label, index) {
+  var colorBox = makeColorBox(legendColors[index]);
+  var labelPanel = ui.Panel({
+    widgets: [colorBox, ui.Label(label)],
+    layout: ui.Panel.Layout.Flow('horizontal')
+  });
+  legend.add(labelPanel);
+});
+
+// Add the legend to the map
+Map.add(legend);
+
+// Control the visibility of map controls
+Map.setControlVisibility({
+  all: false,
+  layerList: false,
+  zoomControl: false,
+  scaleControl: true,
+  mapTypeControl: false,
+  fullscreenControl: false
+});
+
