@@ -78,6 +78,8 @@ For daily updates and to see my maps, follow me on [LinkedIn](https://www.linked
 ![Day 17 Map](data/Day17.jpg)
 
 ![Day 18 Map](data/Day18.png)
+
+![Day 19 Map](data/Day19.png)
 <!--[...repeat sections for Day 2 through Day 30...]-->
 
 <!--### Day 30: [Theme Title]-->
