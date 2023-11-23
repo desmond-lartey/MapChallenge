@@ -81,8 +81,6 @@ For daily updates and to see my maps, follow me on [LinkedIn](https://www.linked
 
 ![Day 19 Map](data/Day19.png)
 
-![Day 20 Map](data/Day20.mp4)
-
 ![Day 21 Map](data/Day21.gif)
 
 ![Day 23 Map](data/Day23.png)
