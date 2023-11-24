@@ -1,0 +1,37 @@
+#Copyright (c) 2023 Desmond Lartey.
+#This work is licensed under the terms of the MIT license.  
+#For a copy, see https://opensource.org/licenses/MIT
+
+import geopandas as gpd
+import matplotlib.pyplot as plt
+from matplotlib.patches import FancyArrowPatch
+
+# Load the GeoJSON file
+file_path = 'path_to_your_geojson_file.geojson' # Replace with your file path
+map_data = gpd.read_file(file_path)
+
+# Create a figure and axis for the final map
+fig, ax = plt.subplots(1, 1, figsize=(10, 10))
+
+# Plot the data
+map_data.plot(ax=ax, color='black', edgecolor='white')
+
+# Position for the north arrow (bottom right)
+arrow_x, arrow_y = 0.95, 0.05
+
+# Add a north arrow
+north_arrow = FancyArrowPatch((arrow_x, arrow_y), (arrow_x, arrow_y + 0.05), 
+                              transform=ax.transAxes, arrowstyle='->', lw=2)
+ax.add_patch(north_arrow)
+ax.text(arrow_x, arrow_y + 0.055, 'N', transform=ax.transAxes, ha='center', va='bottom', fontsize=12, color='white')
+
+# Add title and city name in white at the bottom right
+ax.text(0.95, 0.02, "Map by Desmond Lartey\nBarcelona", transform=ax.transAxes, 
+        ha='right', va='bottom', fontsize=12, color='white')
+
+# Remove axis for a cleaner look
+ax.set_axis_off()
+
+# Save the final map
+output_file = 'path_to_your_output_file.png' # Replace with your desired output path
+plt.savefig(output_file, bbox_inches='tight', pad_inches=0, facecolor='black')
