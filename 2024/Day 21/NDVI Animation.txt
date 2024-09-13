@@ -1,0 +1,62 @@
+//Lets load the modis collection
+var col = ee.ImageCollection("MODIS/061/MOD13A2").select('NDVI');
+
+// We will define a mask to clip the ndvi to the boundaries of our desired location
+//we will use Ghana
+var mask = ee.FeatureCollection('USDOS/LSIB_SIMPLE/2017') 
+  .filter(ee.Filter.eq('country_na', 'Switzerland'));
+
+// For each of the image we will extract, we will calculate the day of the year(doy) and add it as a property to the image
+
+col = col.map(function(img) {
+  var doy = ee.Date(img.get('system:time_start')).getRelative('day', 'year');
+  return img.set('doy', doy); //This will set the doy property to the image
+});
+
+//Now lets filter the collection to select the images between Jan 2019 and Dec 2020
+var distinctDOY = col.filterDate('2019-01-30', '2020-12-31');
+
+//We will define the filter to match images from the original collection to the DOY in the filtered col
+var filter = ee.Filter.equals({leftField: 'doy', rightField: 'doy'});
+
+//Lets join the filtered to match images from the original collection based on matching DOY values
+var join = ee.Join.saveAll('doy_matches'); // 'doy_matches' contains all the matching images
+
+//We will apply the operation to create the new collection
+var joinCol = ee.ImageCollection(join.apply(distinctDOY, col, filter));
+
+//Apply a median reduction on the images with the same DOY to create a composite image
+var comp = joinCol.map(function(img) {
+  var doyCol = ee.ImageCollection.fromImages(img.get('doy_matches'));
+  return doyCol.reduce(ee.Reducer.median());
+});
+
+//Lets now define the visualisation for the ndvi
+var visParams = {
+  min: 0.0,
+  max: 9000.0,
+  palette: [
+    'FFFFFF', 'CE7E45', 'DF923D', 'F1B555', 'FCD163', '99B718', '74A901',
+    '66A000', '529400', '3E8601', '207401', '056201', '004C00', '023B01',
+    '012E01', '011D01', '011301'
+  ],
+};
+
+// Apply the visualisation params to the composite image and clip to your area of interest
+var rgbVis = comp.map(function(img){
+  return img.visualize(visParams).clip(mask);
+});
+
+//Define the parameters for the GIF
+var gifParams = {
+  'region': region,
+  'dimensions': 600,
+  'crs': 'EPSG:3857',
+  'framesPerSecond': 10
+};
+
+//Print the GIF URL to the console and download or view the animation
+print(rgbVis.getVideoThumbURL(gifParams));
+
+//Display a thumbnail 
+print(ui.Thumbnail(rgbVis, gifParams));
