@@ -26,7 +26,7 @@ For daily updates and to see my maps, follow me on [LinkedIn](https://www.linked
 
 
 <!--**Map Image:**-->
-![Day 1 Map](data/Day1.JPG)
+![Day 1 Map](data/Day1.gif)
 
 <!--**Reflections:**-->
 
