@@ -62,7 +62,7 @@
 
 ![Day 19 Map](data/Day19.png)
 
-![Day 21 Map](data/Day21.png)
+![Day 21 Map](data/Day21.gif)
 
 ![Day 23 Map](data/Day23.png)
 
