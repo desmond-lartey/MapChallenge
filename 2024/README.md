@@ -24,7 +24,7 @@
 ![Day 5 Map](data/Day5.jpg)
 
 <!--**Map Image:**-->
-![Day 6 Map](data/Day6.jpg)
+![Day 6 Map](data/Day6.PNG)
 
 <!--**Map Image:**-->
 ![Day 7 Map](data/Day7.PNG)
