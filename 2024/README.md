@@ -27,21 +27,21 @@
 ![Day 6 Map](data/Day6.png)
 
 <!--**Map Image:**-->
-![Day 7 Map](data/Day7.PNG)
+![Day 7 Map](data/Day77.PNG)
 
 <!--**Map Image:**-->
-![Day 8 Map](data/Day8.png)
+![Day 8 Map](data/Day88.png)
 
 <!--**Reflections:**-->
 
 <!--**Map Image:**-->
-![Day 9 Map](data/Day9.png)
+![Day 9 Map](data/Day99.png)
 
 <!--**Map Image:**-->
-![Day 11 Map](data/Day12.PNG)
+![Day 11 Map](data/Day11.PNG)
 
 <!--**Map Image:**-->
-![Day 12 Map](data/Day121.PNG)
+![Day 12 Map](data/Day122.PNG)
 
 <!--**Map Image:**-->
 ![Day 13 Map](data/Day13.gif)
@@ -50,15 +50,15 @@
 ![Day 14 Map](data/Day14.PNG)
 
 <!--**Map Image:**-->
-![Day 15 Map](data/Day15.jpg)
+![Day 15 Map](data/Day155.jpg)
 
 <!--**Map Image:**-->
 ![Day 16 Map](data/Day16.gif)
 
 <!--**Map Image:**-->
-![Day 17 Map](data/Day17.jpg)
+![Day 17 Map](data/Day177.jpg)
 
-![Day 18 Map](data/Day18.png)
+![Day 18 Map](data/Day188.png)
 
 ![Day 19 Map](data/Day19.png)
 
@@ -66,9 +66,9 @@
 
 ![Day 23 Map](data/Day23.png)
 
-![Day 24 Map](data/Day24.png)
+![Day 24 Map](data/Day244.png)
 
-![Day 25 Map](data/Day25.png)
+![Day 25 Map](data/Day255.png)
 <!--[...repeat sections for Day 2 through Day 30...]-->
 
 <!--### Day 30: [Theme Title]-->
