@@ -1,0 +1,20 @@
+#Filter
+"UPLAND_SKM" >= 100
+
+
+#Color ramp
+ramp_color('Spectral',scale_linear("MAIN_RIV",
+minimum("MAIN_RIV"),maximum("MAIN_RIV"),0,1))
+
+ramp_color('Spectral', scale_linear("UPLAND_SKM", 100, 10000, 0, 1))
+
+ramp_color('viridis', scale_linear("UPLAND_SKM", 100, 10000, 0, 1))
+ramp_color('Spectral', scale_polynomial("UPLAND_SKM", 100, 10000, 0, 1, 2))
+translate(@geometry, 0, scale_linear("UPLAND_SKM", 100, 10000, 0, 0.2))
+
+#Stroke width
+scale_linear("UPLAND_SKM", 100, 10000, 0.2, 1)
+scale_linear("UPLAND_SKM", 100, 10000, 0.5, 5)
+
+scale_linear("UPLAND_SKM", 200, 8000, 0, 1)
+scale_linear("UPLAND_SKM", 100, 10000, 1, 8) 
