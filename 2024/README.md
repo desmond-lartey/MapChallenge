@@ -35,7 +35,7 @@
 <!--**Reflections:**-->
 
 <!--**Map Image:**-->
-![Day 9 Map](data/Day99.png)
+![Day 9 Map](data/Day9.png)
 
 <!--**Map Image:**-->
 ![Day 11 Map](data/Day11.PNG)
