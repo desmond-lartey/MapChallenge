@@ -30,12 +30,15 @@
 ![Day 7 Map](data/Day77.PNG)
 
 <!--**Map Image:**-->
-![Day 8 Map](data/Day88.png)
+![Day 8 Map](data/Day8.png)
 
 <!--**Reflections:**-->
 
 <!--**Map Image:**-->
 ![Day 9 Map](data/Day9.png)
+
+<!--**Map Image:**-->
+![Day 10 Map](data/Day10.png)
 
 <!--**Map Image:**-->
 ![Day 11 Map](data/Day11.PNG)
