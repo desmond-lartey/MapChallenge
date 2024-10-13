@@ -1,0 +1,44 @@
+Top Color (Darker Teal): #4da89e
+Bottom Color (Lighter Teal/White): #f0f8f7
+
+Color Ramp:
+Lowest Elevation (coastal/valley): White (#ffffff)
+Slightly Low Elevation: Dark Blue (#003f5c)
+Low Elevation: Blue (#2f4b7c)
+Moderately Low Elevation: Green (#6fb06b)
+Moderate Elevation: Yellow-Green (#f6d854)
+Moderately High Elevation: Yellow-Orange (#f95d6a)
+High Elevation: Orange (#d45087)
+Highest Elevation: Red (#a51b4c)
+
+
+Apply the color ramp
+Lowest Elevation: Dark Blue (#003f5c)
+Low Elevation: Blue (#2f4b7c)
+Moderately Low Elevation: Green (#6fb06b)
+Moderate Elevation: Yellow-Green (#f6d854)
+Moderately High Elevation: Yellow-Orange (#f95d6a)
+High Elevation: Orange (#d45087)
+Highest Elevation: Red (#a51b4c)
+
+
+0 - 300 meters: Dark green (#004f37)
+300 - 400 meters: Medium green (#1a7431)
+400 - 500 meters: Light green (#5aa469)
+500 - 800 meters: Yellow-green (#b5c58f)
+800 - 1500 meters: Light yellow (#f1e189)
+1500 - 2000 meters: Light tan (#e8cda5)
+2000 - 3500+ meters: Light blue or white (#dfefff)
+
+
+Deep Ocean: #003f5c (Dark Blue)
+Shallow Ocean: #2f4b7c (Medium Blue)
+Lowlands: #665191 (Purple)
+Plains: #a05195 (Magenta)
+Hills: #d45087 (Pinkish Red)
+Low Mountains: #f95d6a (Coral)
+High Mountains: #ff7c43 (Orange)
+Rocky Peaks: #ffa600 (Bright Yellow)
+Snow-Capped Peaks: #f7f7f7 (Light Gray)
+Ice: #e0f3f8 (Pale Blue)
+Bare Rock: #bababa (Gray)
