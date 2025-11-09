@@ -1,5 +1,7 @@
 # 30-day Map Challenge
 
+[Check out these video tutorials to reproduce the maps](https://youtu.be/xr7t2PWeVYw?si=fdqzLlnLMo7L4uBs)
+
 This November, we embark on the #30dayMapChallenge—a stimulating and creative endeavor that invites professionals, students, and enthusiasts in the geospatial and cartographic realms to craft and share a new map each day, based on a set of themes. Here's why I believe this challenge is more than just a test of skills, but a gateway to profound learning and community engagement:
 
 - **🔍 Intensive Learning**: Each day poses a new theme, pushing us to dive into diverse datasets, explore various software and tools, and experiment with different cartographic techniques. It's a hands-on crash course in the art and science of map-making.
